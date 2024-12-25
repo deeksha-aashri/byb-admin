@@ -1,0 +1,186 @@
+/* Global styles for the BooksTable */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f0f0f0; /* Light grey background for the table */
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add some shadow for better appearance */
+}
+
+thead th {
+  background-color: #d3d3d3; /* Slightly darker grey for heading */
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+tbody td {
+  padding: 10px;
+  text-align: center;
+  background-color: #e8e8e8; /* Lighter grey for table content */
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternating row color */
+}
+
+button {
+  background-color: #007bff; /* Bootstrap blue for buttons */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.add-book-modal {
+  margin: 50px auto;
+  max-width: 800px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.modal-heading {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 32px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.book-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 calc(50% - 20px); /* Flex rows for 2 columns layout */
+}
+
+.form-row label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.required-asterisk {
+  color: red;
+}
+
+.form-row input, .form-row textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+/* Sidebar layout styles */
+.sidebar-layout {
+  display: flex; /* Flex layout */
+  position: relative;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 25%; /* Default width when open */
+  height: 100vh; /* Full height */
+  background-color: #2c3e50; /* Dark background */
+  color: white;
+  transition: width 0.3s ease; /* Smooth transition on collapse */
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.sidebar.collapsed {
+  width: 5%; /* Width when collapsed */
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 50px 0 0 0; /* Adjust for spacing below the toggle button */
+}
+
+.sidebar li {
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.sidebar li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar li:hover {
+  background-color: #34495e;
+}
+
+/* Content area styles */
+.content {
+  margin-left: 25%; /* Space for open sidebar */
+  width: 75%; /* Remaining width for content */
+  transition: margin-left 0.3s ease, width 0.3s ease; /* Smooth transition for content shift */
+}
+
+.content.shifted {
+  margin-left: 25%; /* Sidebar is open */
+}
+
+.content.full-width {
+  margin-left: 5%; /* Sidebar is collapsed */
+  width: 95%; /* Full width for collapsed sidebar */
+}

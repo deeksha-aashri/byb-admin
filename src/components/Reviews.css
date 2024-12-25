@@ -1,0 +1,25 @@
+.review-card {
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  
+  .review-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .review-card .card-title {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .review-card .card-text {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .review-card .text-muted {
+    font-size: 12px;
+  }
+  
