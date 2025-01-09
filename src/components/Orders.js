@@ -148,7 +148,7 @@ const OrdersTable = () => {
             <ul>
               {selectedOrder.items.map((item) => (
                 <li key={item._id}>
-                  {item.book_id.title} - Quantity: {item.quantity} - Price: ₹{item.price}
+                  {item.book_id?.title} - Quantity: {item.quantity} - Price: ₹{item.price}
                 </li>
               ))}
             </ul>
